@@ -1,33 +1,20 @@
-<a href="https://aimeos.org/">
-    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
-</a>
 
-# Aimeos Laravel package
-[![Total Downloads](https://poser.pugx.org/aimeos/aimeos-laravel/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-laravel)
-[![Build Status](https://travis-ci.org/aimeos/aimeos-laravel.svg)](https://travis-ci.org/aimeos/aimeos-laravel)
-[![Coverage Status](https://coveralls.io/repos/aimeos/aimeos-laravel/badge.svg?branch=master&service=github)](https://coveralls.io/github/aimeos/aimeos-laravel?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-laravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-laravel/?branch=master)
+# GitHub Web Sample
 
-:star: Star us on GitHub — it helps!
 
-[Aimeos](https://aimeos.org/Laravel) is THE professional, full-featured and
-ultra fast e-commerce package for Laravel 5 and 6!  You can install it in your
-existing Laravel application within 5 minutes and can adapt, extend, overwrite
-and customize anything to your needs.
 
-[![Aimeos Laravel demo](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-github.png)](http://laravel.demo.aimeos.org/)
+[GitHub Web Sample] is simple HTML and CSS web application that talk a little Lorem ipsum. The web application is not adaptive, not reponsible but a simple HTML Doc tags for our GitHub Tutorial Sample.
+
+
 
 ## Table of content
 
 - [Supported versions](#supported-versions)
 - [Basic application](#basic-application)
-- [Database](#database)
 - [Installation](#installation)
-- [Setup](#setup)
-- [Admin](#admin)
-- [Hints](#hints)
 - [License](#license)
 - [Links](#links)
+
 
 ## Supported versions
 
@@ -54,87 +41,38 @@ composer create-project aimeos/aimeos myshop
 
 More about the full package: :star: [Aimeos shop](https://github.com/aimeos/aimeos)
 
-### Shop package only
 
-The Aimeos Laravel online shop package is a composer based library. It can be
-installed easiest by using [Composer](https://getcomposer.org) in the root
-directory of your exisisting Laravel application:
-
-```
-composer require aimeos/aimeos-laravel:~2020.10
-```
-
-## Database
-
-Make sure that you've **created the database** in advance and added the configuration
-to the `.env` file in your application directory. Sometimes, using the .env file makes
-problems and you will get exceptions that the connection to the database failed. In that
-case, add the database credentials to the **resource/db section of your ./config/shop.php**
-file too!
-
-If you don't have at least MySQL 5.7.8 or MariaDB 10.2.2 installed, you will probably get an error like
-
-```Specified key was too long; max key length is 767 bytes```
-
-To circumvent this problem, drop the new tables if there have been any created and
-change the charset/collation setting in `./config/database.php` to these values before
-installing Aimeos again:
-
-```php
-'connections' => [
-    'mysql' => [
-        // ...
-        'charset' => 'utf8',
-        'collation' => 'utf8_unicode_ci',
-        // ...
-    ]
-]
-```
-
-If you want to use a database server other than MySQL, please have a look into the article about
-[supported database servers](https://aimeos.org/docs/latest/infrastructure/databases/)
-and their specific configuration. Supported are:
-
-* MySQL, MariaDB (fully)
-* PostgreSQL (fully)
-* SQL Server (fully)
 
 ## Installation
 
-Then, add these lines to the composer.json of the **Laravel skeleton application**:
+### How To Run The Project
+1. First Download this project in ZIP format.
+1. On your default download folder, extract the file
+1. After extracting, open the folder
+1. In the folder, double click the index.html file
+1. Depending on your default browser, it should display the web application.
 
-```
-    "prefer-stable": true,
-    "minimum-stability": "dev",
-    "require": {
-        "aimeos/aimeos-laravel": "~2020.10",
-        ...
-    },
-    "scripts": {
-        "post-update-cmd": [
-            "@php artisan migrate",
-            "@php artisan vendor:publish --tag=public --force",
-            "\\Aimeos\\Shop\\Composer::join"
-        ],
-        ...
-    }
-```
+Thanks For Using our code.
 
-Afterwards, install the Aimeos shop package using
 
-`composer update`
 
-In the last step you must now execute these artisan commands to get a working
-or updated Aimeos installation:
 
-```
-php artisan vendor:publish --all
-php artisan migrate
-php artisan aimeos:setup --option=setup/default/demo:1
-```
 
-In a production environment or if you don't want that the demo data gets
-installed, leave out the `--option=setup/default/demo:1` option.
+## Usage
+
+### How To Edit The content
+1. To add or modify the web app content, open the project folder with a text editor
+![Editing] (5 (2).png)
+Format: ![Alt Text](5 (2).png)
+1. Then continue with adding a file to the project
+1. Or to edit, Right click the the file you like to modify on the text editor
+1. This will open the file content at right pane of the editor
+1. Then apply your changes
+
+Thanks
+
+
+
 
 ## Setup
 
